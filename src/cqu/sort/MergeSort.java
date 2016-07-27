@@ -10,14 +10,14 @@ public class MergeSort {
 		while(i<=mid && j <=high){
 			temp[k++] = data[i] < data[j] ? data[i++]:data[j++];
 		}
-		//若 i>j
+		//if i>j
 		while(i<=mid)
 			temp[k++] = data[i++];
 		//if i< j
 		while(j<=high)
 			temp[k++] = data[j++];
 		
-		// 把新数组中的数覆盖data数组
+		// 将temp中的有序数据拷贝到打他中
 		for(int k1=0;k1< temp.length;k1++){
 			data[low+k1] = temp[k1];
 		}
